@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container mt-5">
+    <form [formGroup]="form" (submit)="onSubmit()" novalidate>
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 col-lg-8">
+          <ion-item class="mt-2">
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input formControlName="usuario" type="text"></ion-input>
+          </ion-item>
+          <ion-item class="mt-2">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-button type="submit" class="mt-2" expand="block">Ingresar</ion-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>

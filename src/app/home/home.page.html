@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Anken
     </ion-title>
+    <ion-item slot="end">
+      <ion-avatar>
+        <img (click)="presentPopover($event)" src='https://avataaars.io/?avatarStyle=Circle&topType=NoHair&accessoriesType=Prescription01&facialHairType=BeardLight&facialHairColor=Auburn&clotheType=BlazerSweater&eyeType=Wink&eyebrowType=Default&mouthType=Concerned&skinColor=Pale'/>
+      </ion-avatar>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-content>
+      <!--  -->
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main">
+    
+  </ion-router-outlet>
 </ion-content>
